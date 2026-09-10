@@ -1,0 +1,23 @@
+<div class = "editpage">
+	<form (submit)="onSubmit()">
+		<p>id: <input type="number" [(ngModel)]="id" name="id"></p>
+		<p>name: <input type="text" [(ngModel)]="name" name="name"></p>
+		<p>description: <input type="text" [(ngModel)]="desc" name="desc"></p>
+		<p>price: <input type="number" [(ngModel)]="price" name="price"></p>
+		<p>amount: <input type="number" [(ngModel)]="amount" name="amount"></p>
+		<p>image_path: <input type="text" [(ngModel)]="image_path" name="image_path"></p>
+		<input type="submit" value="Submit">
+	</form>
+
+ 	<div *ngFor="let i of items">
+ 		<div class="shopitem">
+			<p>id: {{i.id}}</p>
+	 		<p>name: {{i.name}}</p>
+	 		<p>price: {{i.price}}</p>
+	 		<p>description: {{i.desc}}</p>
+	 		<p>amount: {{i.amount}}</p>
+	 		<p>image_path: {{i.image_path}}</p>
+	 		<button (click)="removeItem(i.id)">Remove Item</button>
+ 		</div>
+ 	</div>
+</div>

@@ -1,0 +1,22 @@
+<div class = "item-cointainer">
+
+	<div class = "item">
+
+		<div class="infobox">
+
+			<p class = "item-name">{{item.name}}<p>
+			<p class = "item-description">{{item.desc}}<p>
+
+			<div class = "item-pricebox">
+
+				<p class = "item-price">${{item.price}}<p>
+				<button (click)="addToCart()">Add To Cart</button>
+
+			</div>
+
+		</div>
+
+		<div class="imgbox" [style.background-image]="'url(' + image_path + ')'"></div>
+	</div>
+
+</div>
