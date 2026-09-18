@@ -3,4 +3,5 @@
 	<!-- <p>Welcome to our coffee store! Add desired items to your cart by clicking on the "Add To Cart" button</p> -->
 	<button (click)="clearCart()">Clear Cart</button>
   	<div *ngFor="let i of items"> <app-cart-page-item [item]=i (removedItemFromCart)="load()"/> </div>
+  	<button>Create Order</button>
 </div>
